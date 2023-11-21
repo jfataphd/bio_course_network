@@ -133,7 +133,8 @@ if user_input:
             y=[],
             line=dict(width=0.5, color='#888'),
             hoverinfo='none',
-            mode='lines'
+            mode='lines',
+            showlegend=False
         )
 
         # Add edges to edge trace
@@ -172,7 +173,8 @@ if user_input:
                 size=node_sizes,
                 color=node_colors,
                 line=dict(width=2)
-            )
+            ),
+            showlegend=False
         )
 
         # Create the figure
