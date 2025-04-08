@@ -221,21 +221,23 @@ if user_input:
 
         # Update layout to include custom legend and adjust other settings as needed
         layout_config = dict(
-            title='Network Graph made with Python',
-            titlefont_size=16,
-            showlegend=True,
-            hovermode='closest',  # Set hovermode to closest to enable hover information for nodes
-            margin=dict(b=20, l=5, r=5, t=40),
-            autosize=True,  # Enable responsive layout
-            height=800,  # You can adjust this value as needed
-
-            # Configure the 3D scene
-            scene=dict(
-                xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, showspikes=False),
-                yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, showspikes=False),
-                zaxis=dict(showgrid=False, zeroline=False, showticklabels=False, showspikes=False),
-            )
+    title=dict(
+        text='Network Graph made with Python',
+        font=dict(
+            size=16
         )
+    ),
+    showlegend=True,
+    hovermode='closest',
+    margin=dict(b=20, l=5, r=5, t=40),
+    autosize=True,
+    height=800,
+    scene=dict(
+        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, showspikes=False),
+        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, showspikes=False),
+        zaxis=dict(showgrid=False, zeroline=False, showticklabels=False, showspikes=False),
+    )
+)
 
         print("Layout Configuration:", layout_config)  # Print the layout configuration
         fig.update_layout(layout_config)
