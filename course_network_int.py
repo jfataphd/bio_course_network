@@ -220,7 +220,7 @@ if user_input:
             ))
 
         # Update layout to include custom legend and adjust other settings as needed
-        fig.update_layout(
+        layout_config = dict(
             title='Network Graph made with Python',
             titlefont_size=16,
             showlegend=True,
@@ -236,6 +236,9 @@ if user_input:
                 zaxis=dict(showgrid=False, zeroline=False, showticklabels=False, showspikes=False),
             )
         )
+
+        print("Layout Configuration:", layout_config)  # Print the layout configuration
+        fig.update_layout(layout_config)
 
         # Display the 3D figure in Streamlit
         st.plotly_chart(fig, use_container_width=True)
